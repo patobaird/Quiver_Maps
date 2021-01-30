@@ -104,7 +104,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1d45qeiVO99h7eAPIB20OsfS5VV5M6B3tUMe9krYiILw/gviz/tq?tqx=out:csv&sheet=All Reports',
+        url: 'https://docs.google.com/spreadsheets/d/1ugKN7zvtr3YrVsBkCzRPgnnjIvnuHqwm2WhyZRKHZZY/gviz/tq?tqx=out:csv&sheet=All Reports',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -142,7 +142,7 @@
               //set popup text 
               //You can adjust the values of the popup to match the headers of your CSV. 
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV. 
-              var description = `<h3>` + e.features[0].properties.Location + `</h3>` + `<h4>` + `<b>` + `Filters: ` + `</b>` + e.features[0].properties.Filters + `</h4>` + `<h4>` + `<b>` + `Cisterns: ` + `</b>` + e.features[0].properties.Cisterns + `</h4>`;
+              var description = `<h3>` + e.features[0].properties.Location + `</h3>` + `<h4>` + `<b>` + `Need or Aid: ` + `</b>` + e.features[0].properties.Needoraid + `</h4>` + `<h4>` + `<b>` + `Type: ` + `</b>` + e.features[0].properties.Typeofneedoraid + `</h4>`;
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
               // over the copy being pointed to.
